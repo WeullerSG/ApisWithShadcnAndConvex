@@ -28,6 +28,23 @@ export function DialogDemo() {
     uf: "",
   });
 
+  const cep = (value: string) => {
+    fetch(`https://viacep.com.br/ws/${value}/json/`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.erro) {
+          setFormData((prev) => ({
+            ...prev,
+            street: data.logradouro,
+            city: data.localidade,
+            uf: data.uf,
+          }));
+        } else {
+          alert("CEP não encontrado!");
+        }
+      });
+  };
+
   const createUser = useMutation(api.users.create);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -112,7 +129,12 @@ export function DialogDemo() {
                   id="zipCode"
                   name="zipCode"
                   value={formData.zipCode}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    handleChange(e);
+                    if (e.target.value.length === 8) {
+                      cep(e.target.value); 
+                    }
+                  }}
                 />
               </div>
 
