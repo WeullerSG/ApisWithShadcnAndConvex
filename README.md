@@ -1,13 +1,13 @@
-# 🚀 APIS com ShadCN e Convex
+#  APIS com ShadCN e Convex
 
 Bem-vindo ao projeto **APIs with ShadCN and Convex** — uma aplicação moderna que demonstra a integração entre **Next.js**, **Convex** e **ShadCN UI**.
 
-👉 **Acesse o projeto online:**  
+**Acesse o projeto online:**  
 https://apis-with-shadcn-and-convex-zzof.vercel.app/
 
 ---
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido para demonstrar:
 
@@ -21,7 +21,7 @@ Serve como base de estudo, template ou referência para projetos que utilizem a 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Next.js 15  
 - Convex  
@@ -33,5 +33,5 @@ Serve como base de estudo, template ou referência para projetos que utilizem a 
 
 ---
 
-## 📂 Estrutura do Projeto
+
 
