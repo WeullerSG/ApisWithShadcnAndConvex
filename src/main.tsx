@@ -8,13 +8,12 @@ import { BrowserRouter } from "react-router-dom";
 
 // Imports do Convex
 import { ConvexProvider, ConvexReactClient } from "convex/react";
-import { api } from "../convex/_generated/api";
 
 const client = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL || "http://localhost:8080");
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ConvexProvider client={client} api={api}>
+    <ConvexProvider client={client}>
       <BrowserRouter>
         <SidebarProvider>
           <div className="flex">

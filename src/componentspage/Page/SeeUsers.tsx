@@ -14,11 +14,9 @@ import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 
-interface UsersCardProps {
-  user: Doc<"users">;
-}
 
-export function UsersCard({ user }: UsersCardProps) {
+
+export function UsersCard() {
   const users = useQuery(api.users.list);
   const deleteUsers = useMutation(api.users.remove);
   const [isDeleting, setIsDeleteting] = useState(false);
